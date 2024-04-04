@@ -1,0 +1,24 @@
+{
+  "name": "nest-back-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/nest-back-app/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "nest-back-app:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "nest-back-app:build:development"
+        },
+        "production": {
+          "buildTarget": "nest-back-app:build:production"
+        }
+      }
+    }
+  }
+}
