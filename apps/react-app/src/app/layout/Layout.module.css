@@ -1,0 +1,15 @@
+.menuWrapp {
+  position: relative;
+  max-width: 100px;
+  min-width: 100px;
+  border: 1px solid green;
+}
+
+.mainWrapp {
+  width: 100%;
+}
+
+.headerWrapp {
+  height: rem(80px);
+  border: 1px solid red;
+}

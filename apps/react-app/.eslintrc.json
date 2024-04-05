@@ -4,15 +4,29 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "rules": {}
-    },
-    {
-      "files": ["*.ts", "*.tsx"],
-      "rules": {}
-    },
-    {
-      "files": ["*.js", "*.jsx"],
-      "rules": {}
+      "rules": {
+        "rules": {
+          "@nx/enforce-module-boundaries": [
+            "error",
+            {
+              "enforceBuildableLibDependency": true,
+              "allow": [
+                "@react-app/@app/*",
+                "@react-app/@features/*",
+                "@react-app/@pages/*",
+                "@react-app/@shared/*",
+                "@react-app/@widgets/*"
+              ],
+              "depConstraints": [
+                {
+                  "sourceTag": "*",
+                  "onlyDependOnLibsWithTags": ["*"]
+                }
+              ]
+            }
+          ]
+        }
+      }
     }
   ]
 }

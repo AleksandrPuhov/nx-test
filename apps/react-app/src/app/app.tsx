@@ -1,8 +1,18 @@
-export const App = () => {
+import { FC } from 'react';
+
+import { ErrorBoundary } from './providers/ErrorBoundary';
+import { MantineProvider } from './providers/MantineProvider';
+import { AppRouter } from './router';
+
+import '@react-app/@app/styles/globals.css';
+
+const App: FC = () => {
   return (
-    <div>
-      <p>App</p>
-    </div>
+    <MantineProvider>
+      <ErrorBoundary>
+        <AppRouter />
+      </ErrorBoundary>
+    </MantineProvider>
   );
 };
 
