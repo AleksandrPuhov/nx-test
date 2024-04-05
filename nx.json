@@ -44,7 +44,8 @@
         "previewTargetName": "preview",
         "testTargetName": "test",
         "serveTargetName": "serve",
-        "serveStaticTargetName": "serve-static"
+        "serveStaticTargetName": "serve-static",
+        "devTargetName": "dev"
       }
     },
     {
@@ -52,7 +53,8 @@
       "options": {
         "buildTargetName": "build",
         "serveTargetName": "serve",
-        "previewTargetName": "preview"
+        "previewTargetName": "preview",
+        "devTargetName": "dev"
       }
     }
   ],

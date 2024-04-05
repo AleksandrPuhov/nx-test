@@ -19,6 +19,18 @@
           "buildTarget": "nest-back-app:build:production"
         }
       }
+    },
+    "dev": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "nest-back-app:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "nest-back-app:build:development"
+        }
+      }
     }
   }
 }

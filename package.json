@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "react-dev": "npx nx serve react-app",
-    "next-dev": "npx nx dev next-app -p 3000"
+    "react-dev": "npx nx dev react-app",
+    "next-dev": "npx nx dev next-app",
+    "nest-dev": "npx nx dev nest-back-app",
+    "dev": "npx nx run-many --parallel --target=dev --projects=next-app,react-app,nest-back-app"
   },
   "private": true,
   "devDependencies": {
