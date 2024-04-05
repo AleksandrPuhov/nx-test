@@ -1,0 +1,6 @@
+{
+  "{apps,libs,tools}/**/*.{ts,tsx,js}": [
+    "nx affected:lint --fix --files",
+    "nx format:write --files"
+  ]
+}
