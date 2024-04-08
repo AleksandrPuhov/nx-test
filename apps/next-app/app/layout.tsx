@@ -1,6 +1,9 @@
+import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+
 import '@mantine/core/styles.css';
 
-import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+import { Footer } from '@next-app/@widgets/Footer';
+import { Header } from '@next-app/@widgets/Header';
 
 export default function RootLayout({
   children
@@ -13,7 +16,11 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider>{children}</MantineProvider>
+        <MantineProvider>
+          <Header />
+          {children}
+          <Footer />
+        </MantineProvider>
       </body>
     </html>
   );

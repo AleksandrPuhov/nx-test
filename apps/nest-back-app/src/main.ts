@@ -1,5 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+
 import { AppModule } from './app/app.module';
 
 async function bootstrap() {
@@ -11,8 +13,17 @@ async function bootstrap() {
   app.enableCors({
     // origin: corsOrigins,
     credentials: true,
-    exposedHeaders: ['Content-Type', 'Content-Disposition'],
+    exposedHeaders: ['Content-Type', 'Content-Disposition']
   });
+
+  const config = new DocumentBuilder()
+    .setTitle('test nest docs')
+    .setDescription('api for test')
+    .setVersion('1.0')
+    .addBearerAuth()
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, document);
 
   const port = process.env.NEST_PORT || 3001;
 

@@ -3,14 +3,18 @@ import { Outlet } from 'react-router-dom';
 
 import styles from './Layout.module.css';
 
+import { Header } from '@react-app/@widgets/Header';
+import { Footer } from '@react-app/@widgets/Footer';
+import { LeftMenu } from '@react-app/@widgets/LeftMenu';
+
 export const Layout: FC = () => {
   return (
     <>
-      <div className={styles.menuWrapp}>left</div>
+      <LeftMenu />
       <div className={styles.mainWrapp}>
-        <div className={styles.headerWrapp}>header</div>
+        <Header />
         <Outlet />
-        <div className={styles.footerWrapp}>footer</div>
+        <Footer />
       </div>
     </>
   );

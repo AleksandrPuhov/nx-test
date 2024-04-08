@@ -1,0 +1,10 @@
+.wrapp {
+  padding: calc(var(--height-header) + 10px) 10px 10px;
+  max-width: var(--width-left-menu);
+  min-width: var(--width-left-menu);
+  border-left: 1px solid var(--color-lines-grey);
+  border-right: 1px solid var(--color-lines-grey);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

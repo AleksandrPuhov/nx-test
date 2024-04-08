@@ -1,7 +1,11 @@
+@import url('../../../../../node_modules/modern-normalize/modern-normalize.css');
+@import url('vars.css');
+
 #root {
-  min-height: 100%;
+  min-height: 100svh;
+  max-height: 100svh;
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
   position: relative;
-} 
+}

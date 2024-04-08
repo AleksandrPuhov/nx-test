@@ -5,6 +5,7 @@ import { MantineProvider } from './providers/MantineProvider';
 import { AppRouter } from './router';
 
 import '@react-app/@app/styles/globals.css';
+import '@mantine/core/styles.css';
 
 const App: FC = () => {
   return (

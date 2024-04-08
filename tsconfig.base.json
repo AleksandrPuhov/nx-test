@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@libs/@shared/*": ["./libs/shared/src/*"],
       "@next-app/@app/*": ["./apps/next-app/src/app/*"],
       "@next-app/@features/*": ["./apps/next-app/src/features/*"],
       "@next-app/@pages/*": ["./apps/next-app/src/pages/*"],
@@ -25,8 +26,7 @@
       "@react-app/@features/*": ["./apps/react-app/src/features/*"],
       "@react-app/@pages/*": ["./apps/react-app/src/pages/*"],
       "@react-app/@shared/*": ["./apps/react-app/src/shared/*"],
-      "@react-app/@widgets/*": ["./apps/react-app/src/widgets/*"],
-      "@libs/@shared/*": ["./libs/shared/src/*"]
+      "@react-app/@widgets/*": ["./apps/react-app/src/widgets/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
